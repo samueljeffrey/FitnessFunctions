@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap" rel="stylesheet">
+    <title>FitnessFunctions</title>
+  </head>
+  <body>
+    <section id="header">
+      <img id="desktop-title" src="desktoptitle.png" height="70px">
+      <img id="mobile-title" src="mobiletitle.png" height="80px">
+      <div class="nav-options">
+        <p><a href="#bmi-section">BMI</a></p>
+        <p><a href="#strength-section">Strength</a></p>
+        <p><a href="#macros-section">Macros</a></p>
+      </div>
+    </section>
+
+    <section class="description">
+      <p>Here you can discover your BMI, find out which gym exercises you are strong
+      and weak in, and even generate the ideal calorie and macronutrient intakes for you.</p>
+    </section>
+
+    <hr>
+
+    <section class="main">
+      <div class="section" id="bmi-section">
+        <h1>BMI Calculator</h1>
+        <div class="inputs-outputs" id="bmi-input">
+          <label>Your weight (kg):</label>
+          <input class="text-input" id="bmi-weight" type="text" placeholder="Enter weight">
+          <label>Your height (cm):</label>
+          <input class="text-input" id="bmi-height" type="text" placeholder="Enter height">
+          <button class="bmi-input-button go-button">Go</button>
+        </div>
+
+        <div class="inputs-outputs" id="bmi-output">
+          <h2 class="bmi-number"></h2>
+          <h3 class="bmi-detail"></h3>
+          <button class="bmi-back-button back-button">Back</button>
+        </div>
+      </div>
+
+      <div class="section" id="strength-section">
+        <h1>Strength Evaluator</h1>
+        <div class="inputs-outputs" id="strength-input">
+          <div class="strength-input-table">
+            <div class="labels">
+              <label>Squat</label>
+            </div>
+            <div>
+              <input class="narrow-inputs squat" type="text" placeholder="Enter weight">
+            </div>
+            <div class="labels">
+              <label>Deadlift</label>
+            </div>
+            <div>
+              <input class="narrow-inputs deadlift" type="text" placeholder="Enter weight">
+            </div>
+            <div class="labels">
+              <label>Barbell Row</label>
+            </div>
+            <div>
+              <input class="narrow-inputs row" type="text" placeholder="Enter weight">
+            </div>
+            <div class="labels">
+              <label>Lat Pulldown</label>
+            </div>
+            <div>
+              <input class="narrow-inputs pulldown" type="text" placeholder="Enter weight">
+            </div>
+            <div class="labels">
+              <label>Bench Press</label>
+            </div>
+            <div>
+              <input class="narrow-inputs bench" type="text" placeholder="Enter weight">
+            </div>
+            <div class="labels">
+              <label>Overhead Press</label>
+            </div>
+            <div>
+              <input class="narrow-inputs overhead" type="text" placeholder="Enter weight">
+            </div>
+          </div>
+          <p>(Enter your 5-rep weight for each exercise)</p>
+          <button class="strength-input-button go-button">Go</button>
+        </div>
+
+        <div class="inputs-outputs" id="strength-output">
+          <h3 class="strength-error"></h3>
+          <h2 class="strength-results-title"></h2>
+          <h3 class="squat-result"></h3>
+          <h3 class="deadlift-result"></h3>
+          <h3 class="row-result"></h3>
+          <h3 class="pulldown-result"></h3>
+          <h3 class="bench-result"></h3>
+          <h3 class="overhead-result"></h3>
+          <button class="strength-back-button back-button">Back</button>
+        </div>
+      </div>
+
+      <div class="section" id="macros-section">
+        <h1>Macros Generator</h1>
+        <div class="inputs-outputs" id="macros-input">
+          <div class="macros-input-table">
+            <div class="labels">
+              <label>Weight (kg):</label>
+            </div>
+            <div>
+              <input class="narrow-inputs macros-weight" type="text" placeholder="Enter weight">
+            </div>
+            <div class="labels">
+              <label>Height (cm):</label>
+            </div>
+            <div>
+              <input class="narrow-inputs macros-height" type="text" placeholder="Enter height">
+            </div>
+          </div>
+          <div>
+            <label for="macros-sex">Your sex:</label>
+          </div>
+          <div class="radio-div">
+            <small>Male</small> <input type="radio" name="macros-sex" checked>
+            <small>Female</small> <input type="radio" class="macros-female" name="macros-sex">
+          </div>
+          <div>
+            <label for="macros-activity">Daily activity:</label>
+          </div>
+          <div>
+            <select class="select-input macros-activity">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+          <div>
+            <label for="macros-goal">Weight goal:</label>
+          </div>
+          <div>
+            <select class="select-input macros-goal">
+              <option value="fast-loss">Fast weight loss</option>
+              <option value="slow-loss">Slow weight loss</option>
+              <option value="maintain">Maintain weight</option>
+              <option value="slow-gain">Slow weight gain</option>
+              <option value="fast-gain">Fast weight gain</option>
+            </select>
+          </div>
+          <div>
+            <label for="macros-muscle">Maximise muscle:</label>
+          </div>
+          <div class="radio-div">
+            <small>Yes</small> <input type="radio" class="macros-muscle-yes" name="macros-muscle" checked>
+            <small>No</small> <input type="radio" name="macros-muscle">
+          </div>
+          <button class="macros-input-button go-button">Go</button>
+        </div>
+        <div class="inputs-outputs" id="macros-output">
+          <h3 class="macros-error"></h3>
+          <h2 class="daily-target"></h2>
+          <h2 class="macros-calories"></h2>
+          <h2 class="macros-protein"></h2>
+          <h2 class="macros-carbohydrates"></h2>
+          <h2 class="macros-fat"></h2>
+          <button class="macros-back-button back-button">Back</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
